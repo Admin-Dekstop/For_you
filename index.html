@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Special Lesson Plan for You</title>
+    <title>Special Lesson Plan for Gita Yulianda</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
@@ -44,7 +44,6 @@
         .fade-in { animation: fadeIn 1s ease-in forwards; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         
-        /* Animasi khusus untuk elemen agar tidak kaku di HP */
         .mobile-stack {
             display: flex;
             flex-direction: column;
@@ -61,28 +60,28 @@
     <!-- Loading Screen (Formal) -->
     <div id="loader" class="fixed inset-0 z-50 bg-white flex flex-col items-center justify-center transition-opacity duration-1000">
         <div class="w-12 h-12 border-4 border-slate-200 border-t-slate-800 rounded-full animate-spin mb-4"></div>
-        <p class="font-bold tracking-widest text-slate-400 text-xs">MEMBUKA JURNAL KELAS...</p>
+        <p class="font-bold tracking-widest text-slate-400 text-xs text-center px-4">MEMBUKA JURNAL KELAS GITA YULIANDA...</p>
     </div>
 
     <!-- Main Container -->
     <div id="main-content" class="max-w-5xl w-full mobile-stack gap-8 opacity-0 transition-opacity duration-1000">
         
-        <!-- Kolom Kiri: Profil & Deskripsi Pribadi -->
+        <!-- Kolom Kiri: Profil Gita Yulianda -->
         <div class="w-full md:w-1/2 space-y-6">
             <div class="relative group">
                 <div class="absolute -inset-1 bg-gradient-to-r from-slate-400 to-slate-200 rounded-2xl blur opacity-25"></div>
-                <!-- FOTO DIA: Ganti 'foto-dia.jpg' dengan file lu -->
+                <!-- FOTO GITA YULIANDA -->
                 <img id="profile-img" 
-                     src="https://github.com/Admin-Dekstop/For_you/blob/main/IMG_20251101_071357.jpg" 
+                     src="https://raw.githubusercontent.com/Admin-Dekstop/For_you/main/IMG_20251101_071357.jpg" 
                      onerror="this.src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500'"
-                     alt="Ibu Guru Hebat" 
+                     alt="Ibu Guru Gita Yulianda Hebat" 
                      class="relative w-full aspect-[3/4] md:aspect-[4/5] object-cover rounded-2xl shadow-2xl">
-                <div class="absolute top-4 right-4 teacher-stamp bg-white/90">Premium Class</div>
+                <div class="absolute top-4 right-4 teacher-stamp bg-white/80">Premium Class</div>
             </div>
 
             <div class="glass p-5 md:p-6 rounded-2xl shadow-sm">
                 <h2 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">Subject Profile:</h2>
-                <h1 class="text-xl md:text-2xl font-extrabold mb-4">Ibu Guru [Nama Dia]</h1>
+                <h1 class="text-xl md:text-2xl font-extrabold mb-4">Ibu Guru Gita Yulianda</h1>
                 <ul class="space-y-3 text-xs md:text-sm text-slate-600">
                     <li class="flex items-center gap-2">
                         <span class="text-gold">★</span> <strong>Intelijen:</strong> Sangat Tinggi
@@ -147,7 +146,6 @@
     </div>
 
     <script>
-        // Memastikan tampilan rapi saat load
         window.onload = () => {
             setTimeout(() => {
                 document.getElementById('loader').classList.add('opacity-0');
@@ -167,7 +165,6 @@
             
             noClickCount++;
             
-            // Logika "Lari" yang aman untuk HP (tidak keluar viewport)
             const padding = 20;
             const maxX = window.innerWidth - noBtn.offsetWidth - padding;
             const maxY = window.innerHeight - noBtn.offsetHeight - padding;
@@ -179,14 +176,12 @@
             noBtn.style.left = randomX + 'px';
             noBtn.style.top = randomY + 'px';
             
-            // Feedback pesan error
             alertMsg.classList.remove('opacity-0');
             if(noClickCount > 3) alertMsg.innerHTML = "Siswa ini memaksa! Penolakan tidak terdeteksi di database.";
             if(noClickCount > 7) alertMsg.innerHTML = "CUKUP REVISINYA, PILIH 'YES' SAJA! 😊";
 
-            // Tombol YES membesar secara responsif
             const yesBtn = document.getElementById('yesBtn');
-            let currentScale = Math.min(1 + (noClickCount * 0.1), 2.5); // Max scale 2.5 biar gak nutupin layar banget
+            let currentScale = Math.min(1 + (noClickCount * 0.1), 2.5);
             yesBtn.style.transform = `scale(${currentScale})`;
         }
 
@@ -203,8 +198,8 @@
         }
 
         function contactWA() {
-            const phone = "6282193855270"; // GANTI NOMOR LU DI SINI
-            const text = "Laporan Bu Guru: Saya menerima proposal kamu dengan nilai A+! ❤️";
+            const phone = "6282193855270"; // <--- GANTI NOMOR WHATSAPP LU DI SINI
+            const text = "Laporan Bu Guru Gita: Saya menerima proposal kamu dengan nilai A+! ❤️";
             window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, '_blank');
         }
     </script>
